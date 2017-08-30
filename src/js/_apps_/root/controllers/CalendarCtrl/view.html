@@ -1,0 +1,74 @@
+<div class="calendar-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="header-block">
+		<span class="header-text">Календарь</span>
+	</div>
+
+	<div class="switch-month">
+		<span class="arrow-year fa fa-angle-double-left"  ng-click="goNextYear()"></span>
+		<span class="arrow-month fa fa-angle-left" ng-click="goPrevMonth()"></span>
+		<span class="month-name" ng-bind="month.title | date: 'MMMM yyyy'"></span>
+		<span class="arrow-month fa fa-angle-right" ng-click="goNextMonth()"></span>
+		<span class="arrow-year fa fa-angle-double-right" ng-click="goNextYear()"></span>
+	</div>
+
+
+	<div class="weeks-panel">
+		<ul class="week">
+			<li class="weekday">ПН</li>
+			<li class="weekday">ВТ</li>
+			<li class="weekday">СР</li>
+			<li class="weekday">ЧТ</li>
+			<li class="weekday">ПТ</li>
+			<li class="weekday">СБ</li>
+			<li class="weekday">ВС</li>
+		</ul>
+	</div>
+
+
+	<div class="month-panel">
+		<ul class="month">
+			<li class="day" ng-class="{'day-null': day.mute}" ng-repeat = "day in month.days track by $index">
+				<span class="date" ng-bind="day.date | date: 'dd'"></span>
+				<div class="task-panel">
+				<div ng-repeat="todoInDay in filtered = (day.todoInDays | limitTo: limit) track by $index" ng-if= "!day.mute">
+						<div class="task-item" ng-class="{'active': todoInDay.show}" ng-click="changeStatusFullInfo(todoInDay)">
+							<span class="caption-todo" ng-bind="todoInDay.title"></span>
+							<span class="time-todo" ng-bind="todoInDay.time | date:'HH:mm'"></span>
+						</div>
+
+						<div class="open-todo" ng-if="todoInDay.show">
+
+							<span class="caption-todo-full" ng-bind="todoInDay.title"></span>
+							<span class="time-todo-full" ng-bind="todoInDay.time | date:'dd MMMM yyyy'"></span>
+
+							<div class="change-time-block-full">
+								<input class="choose-time-item" ng-model="todoTime.hours">
+								<span class="colon">:</span>
+								<input class="choose-time-item" ng-model="todoTime.minutes">
+							</div>
+
+							<input type="button" ng-click='saveTimeTodo(); changeStatusFullInfo(todoInDay)' value="Сохранить" class="button-addtime-full" ng-class="{'button-none-addtime-full':!checkTime()}">
+						</div>
+					</div>
+
+
+					<div class="task-item show-more" ng-show="day.todoInDays.length > limit" ng-click="limit = day.todoInDays.length; showMore=!showMore">
+						<span class="caption-todo">Еще задачи({{day.todoInDays.length-2}})</span>
+						<span class="time-todo fa fa-arrow-down"></span>
+					</div>
+
+					<div class="task-item show-more" ng-show="showMore" ng-click="limit = 2; showMore=!showMore">
+						<span class="caption-todo">Скрыть</span>
+						<span class="time-todo fa fa-arrow-up"></span>
+					</div>
+				</div> 
+			</li>
+
+
+			
+
+
+		</ul>
+	</div>
+</div>
+

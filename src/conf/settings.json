@@ -1,0 +1,7 @@
+{
+	"backend": "http://localhost:3001",
+	"auth": {
+		"headerName": "Authorization",
+		"tokenKey": "session"
+	}
+}

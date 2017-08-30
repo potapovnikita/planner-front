@@ -1,0 +1,29 @@
+.home-panel {
+	cursor: pointer;
+	margin-top: 35%;
+	background: $white;
+	text-align: center;
+	opacity: 0.95;
+	span{
+		display: block;
+	}
+
+	&:hover{
+		outline: solid 3px $lightblue;
+	}
+}
+
+.icon-container{
+	padding-top: 90px;
+	height: 200px;
+	background-color: $white;   
+}
+
+.label-home-panel {
+	text-align: center;
+	font-size: 21px;
+	font-weight: 400;
+	color: $black;
+	padding-top: 95px;
+	padding-bottom: 90px;
+}

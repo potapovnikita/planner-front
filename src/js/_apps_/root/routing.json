@@ -1,0 +1,22 @@
+[
+    {
+        "uri": "/",
+        "controller": "IndexCtrl",
+        "title": "Личный кабинет"
+    },
+        {
+        "uri": "/profile",
+        "controller": "ProfileCtrl",
+        "title": "Профиль"
+    },
+        {
+        "uri": "/tasks",
+        "controller": "TasksCtrl",
+        "title": "Задачи"
+    },
+        {
+        "uri": "/calendar",
+        "controller": "CalendarCtrl",
+        "title": "Календарь"
+    }
+]

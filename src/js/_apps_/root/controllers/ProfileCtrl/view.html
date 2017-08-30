@@ -1,0 +1,40 @@
+<div class="profile-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="header-block">
+		<span class="header-text">Настройки профиля</span>
+	</div>
+	<div class="image-block">
+		<div class="image-download">		
+			<img ng-src="{{ getAvatar(avatar) }}" alt="avatar">
+			<input type="submit" value="Загрузить" class="button-download-image input-font" ng-click="applyAvatar()">
+		</div>
+	</div>
+
+
+	<form class="panel-form-profile" ng-submit="signIn()">
+		<input class="input-profile input-font" type="text" placeholder="Введите имя" ng-model="user.name">
+
+		<div class="date-birth">
+			<input class="input-profile input-font" type="text" placeholder="Введите дату рождения" ng-model="user.birthday | date:'dd MMMM yyyy'">
+			<small-calendar time="user.birthday" options="options"></small-calendar>
+		</div>
+
+		<input type="submit" value="Сохранить" class="button-save-user-data input-font" ng-click="checkData() && saveData()" ng-class="{'button-save-user-data-none': !checkData()}">
+		<span class="error-user-data" ng-if="!checkData()">Введите Ваши данные</span>
+
+
+	</form>
+	<hr class="line">
+
+	<div class="header-block-session">
+		<span class="header-text">Ваши сессии</span>
+	</div>
+
+	<div class="session-block" ng-repeat="session in user.sessions track by $index">
+		<span class="session-name" >
+			<span ng-bind = "getSession(session)"></span>
+		</span>
+		<div ng-click="delSession($index, session)" class="button-session-delete">
+			<span class="fa fa-ban"></span>
+			<span>Terminate</span>
+		</div>
+	</div>

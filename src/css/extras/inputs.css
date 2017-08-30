@@ -1,0 +1,64 @@
+.input-font {
+	font-family: "ProximaNovaRegular";	
+}
+
+.input {
+	width: 322px;
+	height: 40px;
+	margin-top: 11px;
+	border-radius: 2px;
+	border: solid 1px $mattlightblue;
+
+	padding: 0 0 0 14px;
+	font-size: 16px;
+	font-weight: 400;
+
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.input-error {
+	width: 322px;
+	height: 40px;
+	margin-top: 11px;
+	border-radius: 2px;
+	border: solid 1px $lightpink;
+
+	padding: 0 0 0 14px;
+	font-size: 16px;
+	font-weight: 400;
+
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.input-profile {
+	display: block;
+	width: 322px;
+	height: 40px;
+	margin-top: 11px;
+	border-radius: 2px;
+	border: solid 1px $mattlightblue;
+
+	padding: 0 0 0 14px;
+	font-size: 16px;
+	font-weight: 400;
+
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}

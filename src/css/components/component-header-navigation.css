@@ -1,0 +1,30 @@
+.container-exit{
+
+	position: absolute;;
+	right:0;
+	padding-top: 3%;
+	padding-right: 5.7%;
+	z-index: 999;
+}
+
+.exit-block span {
+
+	display: block;
+	float:left;
+	font-size: 16px;
+	font-weight: 400;
+	cursor: pointer;
+	color: $white;
+}
+
+.container-back{
+	position: absolute;
+	left:0;
+	padding-top: 3%;
+	padding-left: 5.7%;
+	z-index: 999;
+	
+	span {	
+		cursor: pointer;
+	}
+}

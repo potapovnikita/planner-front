@@ -1,0 +1,74 @@
+.sign-center-block {
+	text-align: center;
+}
+
+.sign-block {
+	margin-top: 100px;
+	width: 502px;
+	height: 378px;
+	opacity: 0.95;
+	border-radius: 2px;
+	display: inline-block;
+	text-align: center;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+
+.panel-form {
+	margin-top: 30px;
+}
+
+.button-enter {
+	cursor: pointer;
+	width: 236px;
+	height: 60px;
+	background-color: $white;
+	margin-top: 300px;
+	text-align: center;
+	border: none;
+	font-size: 21px;
+	font-family: "ProximaNovaRegular";
+
+	&:hover {
+		outline: solid 2px $lightblue;
+	}
+}
+
+.button-signin {
+	width: 322px;
+	height: 40px;
+	margin-top: 40px;
+	border-radius: 2px;
+	background-color: $lilac;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.button-signup {
+	width: 322px;
+	height: 40px;
+	margin-top: 11px;
+	border-radius: 2px;
+	background-color: $lilac;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.img-error {
+	position: absolute;
+	margin: 21px 0px 0px 11px;
+}

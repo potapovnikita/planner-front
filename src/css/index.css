@@ -1,0 +1,58 @@
+
+/** Bootstrap **/
+@import './../../bower_components/bootstrap-grid-only/css/grid12.css';
+
+/**Extras**/
+
+@import './extras/colors.css';
+@import './extras/placeholders.css';
+@import './extras/fonts.css';
+@import './extras/inputs.css';
+
+
+/** Components **/
+@import './components/component-header-navigation.css';
+@import './components/signInUpPage.css';
+@import './components/homeUserPage.css';
+@import './components/profilePage.css';
+@import './components/todoPage.css';
+@import './components/calendarPage.css';
+@import './components/small-calendar.css';
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "ProximaNovaRegular";	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.background {
+	background: linear-gradient(234deg, $bg1, $bg2);
+	background-attachment: fixed;	
+}
+
+.header-block {
+	margin-top: 59px;
+	width: 100%;
+	position: relative;
+
+}
+.header-text{
+	font-size: 21px;
+	font-weight: 400;
+	color: $black;
+}
+
+
+
+
+
+
+
+
+

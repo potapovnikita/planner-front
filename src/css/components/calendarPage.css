@@ -1,0 +1,228 @@
+.calendar-block {
+	background-color:$white;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	min-width: 950px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.switch-month {
+	margin-top: 58px;
+	margin-bottom: 27px;
+}
+.arrow-month {
+	width: 7px;
+	height: 12px;
+	cursor: pointer;
+	color: $arrowDate;
+}
+
+.arrow-year{
+	width: 10px;
+	height: 15px;
+	cursor: pointer;
+	margin: 0px 10px;
+	color: $arrowDate;
+}
+
+.month-name {
+	display: inline-block;
+	width: 130px;
+	height: 20px;
+	font-size: 16px;
+	color: #335588;
+	margin-left: 53px;
+	margin-right: 53px;
+}
+
+.weeks-panel {
+	background-color: #9fb3d1;
+	width: 929px;
+	margin: 0 auto;
+}
+
+.week {
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.weekday {
+	list-style-type: none;
+	padding: 10px 105px 10px 10px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #fff;
+
+}
+
+.month-panel {
+	width: 930px;
+	margin: 0 auto;
+}
+
+.month {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap
+}
+
+.day {
+	padding: 0 6px;
+	list-style-type: none;
+	width: 132.8px;
+	height: 120.4px;
+	border: solid 1px $lightgrey;
+	position: relative;
+	
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.date {
+	display: block;
+	position: absolute;
+	font-size: 16px;
+	color: #9a9ea4;
+	top: 8px;
+	right: 10px;
+}
+
+.day-null {
+	background-color: $dayNull; 
+}
+
+.task-panel  {
+	position: absolute;
+	top: 35px;
+	z-index: 9990;
+	background-color: $white;
+
+}
+.task-item {
+	width: 123px;
+	height: 22px;
+	border-radius: 0px;
+	background-color: $todoInCal;
+	margin: 3px 0px;
+	margin-left: -2px;
+	position: relative;
+	white-space: nowrap;
+	cursor: pointer;
+
+	span {
+		display: block;
+		font-size: 11px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&:hover {
+		outline: solid 1px $lightblue;
+	}	
+}
+
+.active {
+	background-color: $todoInCalActive;
+	color: $white;
+}
+
+.show-more {
+	background-color: $white;
+	border: solid 1px $grey;
+	cursor: pointer;
+
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}	
+}
+
+.caption-todo {
+	width: 80px;
+	position: absolute;
+	padding-left: 3px;
+	text-align: left;
+}
+
+.time-todo {
+	width: 35px;
+	top: 0px;
+	right: 4px;
+	position: absolute;
+	text-align: right;
+}
+
+.open-todo {
+	background-color:$white;
+	position: absolute;
+	border: solid 1px $lightblue;
+	border-radius: 2px;
+	left: -2px;
+	padding-left: 24px;
+	text-align: left;
+	width: 283px;
+	height: 186px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+	z-index: 9999;
+}
+
+.caption-todo-full {
+	font-size: 16px;
+	display: block;
+	color: #333333;
+	margin-top: 21px;
+}
+
+.time-todo-full {
+	display: block;
+	font-size: 11px;
+	color: #415b8d;
+	margin-top: 11px
+}
+
+.button-addtime-full {
+	width: 87px;
+	height: 22px;
+	border-radius: 3px;
+	background-color: $white;
+	font-size: 11px;
+	font-weight: 400;
+	color: $black;
+	border: solid 1px $grey;
+	cursor: pointer;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.button-none-addtime-full {
+	width: 87px;
+	height: 22px;
+	border-radius: 3px;
+	background-color: lightgrey;
+	font-size: 11px;
+	font-weight: 400;
+	color: $white;
+	cursor: default;
+	outline: 0 !important;
+	border: none;
+
+	&:hover {
+		border: none;
+	}
+}
+
+.change-time-block-full {
+	margin-top: 18px;
+	margin-bottom: 23px;
+}
+
+

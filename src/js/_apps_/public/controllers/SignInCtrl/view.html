@@ -1,0 +1,18 @@
+<div class="sign-center-block">
+	<div class="sign-block">
+		<div class="header-block">
+			<span class="header-text">Войти в приложение</span>
+		</div>		
+		<form class="panel-form" ng-submit="signIn()">
+			<input ng-if="!err" class="input input-font" type="text" placeholder="Введите логин"  ng-model="user.email" ng-change="clearMessages()">
+			<input ng-if="!err" class="input input-font" type="password" placeholder="Введите пароль" ng-model="user.password" ng-change="clearMessages()">
+
+			<input ng-if="err" class="input input-font" type="text" placeholder="Введите логин"  ng-model="user.email" ng-change="clearMessages()">
+			<input ng-if="err" class="input-error input-font" type="password" placeholder="Неверный пароль" ng-model="user.password" ng-change="clearMessages()"><!--
+		 --><img ng-if="err" src="./img/alert.svg" alt="error" class="img-error">
+
+			<input type="submit" value="Войти" class="button-signin input-font">
+		</form>
+	</div>
+
+</div>

@@ -1,0 +1,14 @@
+<div class="sign-center-block">		
+	<div class="sign-block">
+		<div class="header-block">
+			<span class="header-text">Регистрация e-mail</span>
+		</div>		
+		<form class="panel-form" ng-submit="signUp()">
+			<input class="input input-font" type="text" ng-model="user.email">
+			<input class="input input-font" type="password" ng-model="user.password">
+			<input class="input input-font" type="password" placeholder="Повторите пароль" ng-model="user.repassword" ng-change="clearMessages()">
+			<span ng-if="difpassword">Пароли отличаются</span>
+			<button type="submit" class="button-signup input-font">Зарегистрироваться</button>
+		</form>
+	</div>
+</div>

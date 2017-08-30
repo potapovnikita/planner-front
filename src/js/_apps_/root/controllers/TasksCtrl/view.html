@@ -1,0 +1,53 @@
+<div class="todo-block col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="header-block">
+		<span class="header-text">Дела</span>
+	</div>
+
+	<form class="panel-form-todo">
+		<div class="date-todo">
+			<input class="input-todo input-font" type="text" placeholder="Новое дело" ng-model="todoData.title"><!--
+		 --><small-calendar time="todoData.time" options="options"></small-calendar>
+		</div>
+		<input type="submit" value="Добавить" class="button-addtodo input-font" ng-click="checkField() && addTodo()" ng-class="{'button-none':!checkField()}">
+	</form>
+
+	<hr class="line-todo">
+	
+
+
+	<div class="todo todo-incomplete" ng-repeat="todo in user.todo track by $index" ng-show="checkStatusTodo(false)" ng-if ="!todo.status">
+		<div>
+			<div class="todo-name">		
+				<input type="checkbox" class="checkbox-empty inp-check" id="k1_{{ todo._id }}" ng-model="todo.status" ng-change="ChangeStatusTodo()">
+				<label for="k1_{{ todo._id }}" class="label-for-check"><span ng-bind="todo.title"></span></label>
+			</div>
+			
+			<div class="smalldate-todo">
+				<span ng-bind="todo.time | date:'dd MMMM yyyy hh:mm a'"></span>
+			</div>
+		</div>
+	</div>
+
+
+	<h4 ng-show="!checkStatusTodo(false)">Нет текущих задач</h4>
+
+
+
+	<hr class="line-todo">
+
+	<div class="todo-complete-block" ng-repeat="todo in user.todo track by $index" ng-show="checkStatusTodo(true)" ng-if ="todo.status">
+		<div class="todo-complete-name">		
+			<div class="todo-name">		
+				<input type="checkbox" class="inp-check" id="k2_{{ todo._id }}" ng-model="todo.status" ng-change="ChangeStatusTodo()">
+				<label for="k2_{{ todo._id }}" class="label-for-check"><span ng-bind="todo.title"></span></label>
+				
+			</div>
+		</div>
+		<div class="todo-button-delete" ng-click="deleteTodo($index, todo)">
+			<div class="img"></div>
+
+
+			<span>Удалить</span>
+		</div>
+	</div>
+</div>

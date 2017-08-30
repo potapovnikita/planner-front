@@ -1,0 +1,265 @@
+.todo-block {
+	background-color:$white;
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	min-width: 800px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.panel-form-todo {
+	margin-top: 50px;
+	display: inline-block;
+	text-align: center;
+} 
+
+.date-todo {
+	display: inline-block;
+	position: relative;
+
+	img {
+		position: absolute;
+		cursor: pointer;
+		right: 12px;
+		top: -15px;
+	}
+}
+
+.input-todo {
+	width: 480px;
+	height: 40px;
+	border-radius: 2px 0px 0px 2px;
+	border: 1px $mattlightblue;
+	border-style: solid none solid solid;
+
+	padding: 0 0 0 14px;
+	font-size: 16px;
+	font-weight: 400;
+
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.input-date {
+	width: 135px;
+	height: 40px;
+	border-radius: 0px 2px 2px 0px;
+	border: 1px $mattlightblue;
+	border-style: solid solid solid none;
+	display: inline-block;
+	padding: 5px 0 2px 5px;
+	font-size: 11px;
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: $dateTextColor;
+
+	span {
+		display: block;
+		position: absolute;
+		width: 100px;
+		top: -11px;
+		left: -10px;
+		
+	}
+}
+
+.date-todo:hover  .input-date { 		
+	border: 1px $lightblue;
+	border-style: solid solid solid none;
+}
+
+.date-todo:hover  .input-todo { 		
+	border: 1px $lightblue;
+	border-style: solid none solid solid;
+}
+
+.button-addtodo {
+	margin-left: 19px;
+	width: 116px;
+	height: 40px;
+	border-radius: 2px;
+	background-color: $lilac;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.button-none {
+	margin-left: 19px;
+	width: 116px;
+	height: 40px;
+	border-radius: 2px;
+	background-color: lightgrey;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	cursor: default;
+	outline: 0 !important;
+	border: none;
+
+	&:hover {
+		border: none;
+	}
+}
+
+
+.line-todo {
+	margin-top: 56px;
+	margin-bottom: 65px;
+	border: none;
+	background-color: $lightgrey;
+	color: $lightgrey;
+	height: 1px;
+}
+
+.todo {
+	height: 40px;
+	border-radius: 2px;
+	background-color: $verylightgrey;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 15px;
+}
+
+.todo-incomplete {
+	width: 750.7px;
+}
+
+.todo-complete {
+	width: 615px;
+}
+
+.todo-name {
+	display: block;
+	position: absolute;
+	margin: 10px 15px;
+	left: 0px;
+	color: $lightblack;
+
+}
+
+.smalldate-todo {
+	right: 0px;
+	cursor: pointer;
+
+	span {
+		position: absolute;
+		font-size: 11px;
+		font-weight: 400;
+		right: 14.7px;
+		top: 15px;
+		color: $dateTextColor;
+	}
+}
+
+.todo-complete-block {
+	height: 40px;
+	border-radius: 2px;
+	display: inline-block;
+	position: relative;
+	margin-bottom: 15px;
+	width: 750.7px;
+}
+
+.todo-complete-name {
+	background-color: $verylightgrey;
+	width: 615px;
+	height: 40px;
+	position: absolute;
+
+
+}
+
+.todo-button-delete {
+	position: absolute;
+	margin-left: 19px;
+	width: 116px;
+	height: 40px;
+	cursor: pointer;
+	right: 0px;
+
+	&:hover {
+		span {
+			color: red;
+		}
+
+		.img{
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			background: url("../img/deleteRed.png") no-repeat;
+			width: 14px;
+			height: 18px;
+		}
+	}
+
+	.img{
+		width: 14px;
+		height: 18px;
+		position: absolute;
+		top: 9px;
+		left: 10px;
+		background: url("../img/delete.svg") no-repeat;
+	}
+
+	span {
+		display: inline-block;
+		position: absolute;
+		font-size: 16px;
+		font-weight: 400;
+		cursor: pointer;
+		color: $lilac;
+		right: 16px;
+		top: 9px;
+		
+	}
+}
+h4 {
+	text-align: center;
+}
+
+.label-for-check {
+	width: 15px;
+	height: 15px;
+	display: block;
+	background: url("../img/check.png") no-repeat;
+	background-position: 0 -30px;
+	cursor: pointer;
+	margin-top: 3px;
+	padding-left:30px;
+
+	span {
+		display: block;
+		width: 500px;
+		text-align: left;
+		position: absolute;
+		top: 1px;
+
+	}
+}
+
+.inp-check[type="checkbox"]:checked + .label-for-check {
+	background-position: 0 0px; 
+}
+
+.inp-check[type="checkbox"]:checked:hover + .label-for-check {
+	background-position: 0 -15px; 
+}
+
+.inp-check[type="checkbox"]:hover + .label-for-check {
+	background-position: 0 -45px; 
+}
+
+.inp-check[type="checkbox"] {
+	display:none; 
+}
+

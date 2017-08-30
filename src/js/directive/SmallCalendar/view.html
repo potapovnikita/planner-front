@@ -1,0 +1,52 @@
+<!--
+--><div ng-if="options.controller === 'task'" class="input-date input-font" type="text">
+	<span ng-bind="time | date:'dd MMMM yyyy'"></span>
+</div>
+<img src="./img/little-calendar.svg" alt="small calendar" ng-Click="showCalendar=!showCalendar" ng-class="{'calendar-for-birthday': options.controller === 'profile'}">
+
+<div class="calendar-small" ng-class="{'calendar-small-task': options.controller === 'task', 'calendar-small-profile': options.controller === 'profile'}" ng-if="showCalendar">
+	<div class="weeks-panel-small">
+		<ul class="week-small">
+			<li class="weekday-small">ПН</li>
+			<li class="weekday-small">ВТ</li>
+			<li class="weekday-small">СР</li>
+			<li class="weekday-small">ЧТ</li>
+			<li class="weekday-small">ПТ</li>
+			<li class="weekday-small">СБ</li>
+			<li class="weekday-small">ВС</li>
+		</ul>
+	</div>
+
+	<div class="switch-month-small" id="scrollMonth" id="delta">
+		<img src="./img/arrow-left.svg" class="arrow-year-small" type="img" alt="arrow left" ng-click="goPrevYear()">
+		<img src="./img/arrow-left.svg" class="arrow-month-small" type="img" alt="arrow left" ng-click="goPrevMonth()">
+		<span class="month-name-small" ng-bind="month.title | date: 'MMMM yyyy'"></span>
+		<img src="./img/arrow-right.svg" class="arrow-month-small" type="img" alt="arrow right" ng-click="goNextMonth()">
+		<img src="./img/arrow-right.svg" class="arrow-year-small" type="img" alt="arrow right" ng-click="goNextYear()">
+	</div>
+
+
+	<div class="month-panel-small">
+		<ul class="month-small">
+			<li class="day-small" ng-class="{'current-day': checkCurrentDay(day.date)}"  ng-repeat = "day in month.days track by $index" ng-click="getDate(day.date)">
+				<span ng-class="{'day-null-small': day.mute}" ng-bind ="day.date | date: 'dd'" ></span>
+			</li>
+		</ul>
+	</div>
+</div> 
+
+
+<div class="time-panel" ng-if="showTimePanel">
+	<div class="caption-time-panel">
+		<span>Выберите время</span>
+	</div>
+
+	<div class="choose-time-block">
+		<input class="choose-time-item" ng-model="todoTime.hours">
+		<span class="colon">:</span>
+		<input class="choose-time-item" ng-model="todoTime.minutes">
+	</div>
+	
+
+	<input type="button" ng-click='checkTime() && saveTimeTodo()' value="Сохранить" class="button-addtime" ng-class="{'button-none-addtime':!checkTime()}"> 
+</div> 

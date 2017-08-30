@@ -1,0 +1,17 @@
+[
+        {
+        "uri": "/",
+        "controller": "IndexCtrl",
+        "title": "Добро пожаловать"
+    },
+        {
+        "uri": "/signin",
+        "controller": "SignInCtrl",
+        "title": "Войти"
+    },
+        {
+        "uri": "/signup",
+        "controller": "SignUpCtrl",
+        "title": "Регистрация"
+    }
+]

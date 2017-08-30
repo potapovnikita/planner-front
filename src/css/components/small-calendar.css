@@ -1,0 +1,230 @@
+.ng-isolate-scope {
+	position: relative;
+	top: 15px;
+}
+
+.calendar-small {
+	border-radius: 2px;
+	position: absolute;
+	background-color:$white;
+	text-align: center;
+	z-index: 9999;
+	border: solid 1px lightgrey;
+	box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+}
+
+.calendar-small-task {
+	right: 0px;
+	top: 15px;
+}
+
+.calendar-small-profile {
+    right: -162px;
+    top: -15px;
+}
+
+.calendar-for-birthday {
+    position: absolute;
+    top: -45px;
+    left: 130px;
+    cursor: pointer;
+}
+
+.weeks-panel-small {
+	background-color: #9fb3d1;
+	margin: 0 auto;
+}
+
+.week-small {
+	padding: 10px 20px;
+	margin: 0;
+	display: flex;
+	text-align: center;
+	justify-content: space-between;
+}
+
+.weekday-small {
+	list-style-type: none;
+	width: 30px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.switch-month-small {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+	img {
+		position: static;
+	}
+}
+
+.arrow-month-small {
+	width: 5.6px;
+	height: 9px;
+	cursor: pointer;
+}
+
+.arrow-year-small {
+	width: 7.6px;
+	height: 11px;
+	cursor: pointer;
+	margin: 0px 15px;
+
+}
+
+.month-name-small {
+	display: inline-block;
+	width: 130px;
+	height: 20px;
+	font-size: 14px;
+	color: #707070;
+	margin-left: 25px;
+	margin-right: 25px;
+	
+	span {
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+.month-panel-small {
+	width: 300px;
+	margin: 0 auto;
+}
+
+.month-small {
+	margin: 0;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	padding: 10px 20px;
+	margin: 0;
+
+	text-align: center;
+	justify-content: space-between;
+}
+
+.day-small {
+	padding: 15px 0;
+	margin-bottom: 12px;
+	list-style-type: none;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	position: relative;
+	color: #9a9ea4;
+	&:hover {
+		outline: solid 1px #749ae3;
+	}
+
+	span {
+		display: block;
+		font-size: 14px;
+		margin-top: -6px; 
+	}
+}
+
+.day-null-small {
+	color: #9fb3d1;
+}
+
+.current-day {
+	background-color: #7989b4;
+	color: #ffffff;
+	border-radius: 25px;
+}
+
+.time-panel {
+	height: 358px;
+	border-radius: 2px;
+	position: absolute;
+	right: 0px;
+	top: 15px;
+	background-color:$white;
+	text-align: center;
+	z-index: 9999;
+	border: solid 1px lightgrey;
+	box-shadow: 0 4px 8px 0 rgba(128, 128, 128, 0.5);
+}
+
+.caption-time-panel {
+	background-color: #9fb3d1;
+	width: 300px;
+	height: 37px;
+
+
+	span{
+		font-size: 12px;
+		font-weight: 600;
+		color: #fff;
+		display: block;
+		padding: 10px;
+	}
+}
+
+.button-addtime {
+
+	width: 126px;
+	height: 40px;
+	border-radius: 2px;
+	background-color: $lilac;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	border: none;
+	cursor: pointer;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+.button-none-addtime {
+
+	width: 126px;
+	height: 40px;
+	border-radius: 2px;
+	background-color: lightgrey;
+	font-size: 16px;
+	font-weight: 400;
+	color: $white;
+	cursor: default;
+	outline: 0 !important;
+	border: none;
+
+	&:hover {
+		border: none;
+	}
+}
+
+.choose-time-block {
+	margin-top: 110px;
+	margin-bottom: 90px;
+}
+.colon {
+	font-size: 16px;
+	color: #566495;
+	margin: 0px 5px;
+}
+.choose-time-item {
+	width: 51px;
+	height: 40px;
+	border-radius: 2px;
+	border: solid 1px #a3b1cd;
+	display: inline-block;
+	outline: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+	color: #566495;
+	font-size: 16px;
+
+	&:hover {
+		border: solid 1px $lightblue;
+	}
+}
+
+

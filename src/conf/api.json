@@ -1,0 +1,15 @@
+{
+    "auth": {
+        "check": "/user",
+        "in": "/sign/in",
+        "up": "/sign/up",
+        "out": "/sign/out"
+    },
+    "user": {
+    	"sessions": "/user/sessions",
+    	"data": "/user/data",
+    	"todo": "/user/todo",
+    	"todoTime": "/user/todo/time",
+    	"avatar": "/user/avatar/"
+    }
+}
